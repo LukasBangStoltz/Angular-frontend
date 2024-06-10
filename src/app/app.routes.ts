@@ -4,6 +4,8 @@ import { VolunteerListComponent } from './volunteer-list/volunteer-list.componen
 import { EditVolunteerComponent } from './edit-volunteer/edit-volunteer.component';
 import { EmployerListComponent } from './employer-list/employer-list.component';
 import { EditEmployerComponent } from './edit-employer/edit-employer.component';
+import { AddEmployerComponent } from './add-employer/add-employer.component';
+
 import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
@@ -13,6 +15,7 @@ export const routes: Routes = [
     { path: "employers", component: EmployerListComponent },
     { path: "jobs", component: EditVolunteerComponent },
     { path: "edit-employer/:id", component: EditEmployerComponent },
+    { path: "add-employer", component: AddEmployerComponent },
     { path: "**", component: VolunteerListComponent }
 ];
 

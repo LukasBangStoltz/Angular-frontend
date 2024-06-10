@@ -8,14 +8,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
-  selector: 'app-edit-employer',
+  selector: 'app-add-employer',
   standalone: true,
   imports: [MatButtonModule, MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule],
-  templateUrl: './edit-employer.component.html',
-  styleUrls: ['./edit-employer.component.css']  
+  templateUrl: './add-employer.component.html',
+  styleUrls: ['./add-employer.component.css']  
 })
 
-export class EditEmployerComponent implements OnInit {
+export class AddEmployerComponent implements OnInit {
   employerId!: number;
   employerForm: FormGroup;
 
@@ -37,7 +37,6 @@ export class EditEmployerComponent implements OnInit {
   ngOnInit(): void {
     this.employerId = this.route.snapshot.params['id'];
     this.initializeForm();
-    this.loadEmployerData();
   }
 
   private initializeForm(): void {
@@ -48,23 +47,11 @@ export class EditEmployerComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]]
     });
   }
-    private loadEmployerData(): void {
-      this.employerService.getEmployer(this.employerId).subscribe({
-        next: (employer) => {
-          this.employerForm.patchValue(employer);
-          console.log(employer)
-        },
-        error: (error) => {
-          console.error('Error loading employer data', error);
-          // Optionally handle user feedback here
-        }
-      });
-    }
-    updateEmployer(): void {
+    createEmployer(): void {
       console.log('Form submission triggered');
       if (this.employerForm.valid) {
         console.log("EMPLOYEE ID HERE: " + this.employerId)
-        this.employerService.updateEmployer(this.employerId, this.employerForm.value).subscribe({
+        this.employerService.createEmployer(this.employerForm.value).subscribe({
           next: () => {
             this.router.navigate(['/employers']); // Navigate to the list of employers
           },

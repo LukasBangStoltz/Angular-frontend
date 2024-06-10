@@ -31,6 +31,7 @@ private baseUrl: string = "https://localhost:7013";
 
   // Update an employer
   updateEmployer(id: number, employer: Employer): Observable<any> {
+    employer.id = id;
     return this.http.put(`${this.baseUrl}/Employer`, employer);
   }
 }

@@ -1,7 +1,7 @@
 export interface Employer {
     id: number;
-    first_name: string;
-    last_name: string;
+    firstName: string;
+    lastName: string;
     organisation: string;
     email: string;
 }
