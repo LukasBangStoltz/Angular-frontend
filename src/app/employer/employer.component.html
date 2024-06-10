@@ -1,0 +1,28 @@
+
+<table>
+    <tr>
+        <td>Id</td>
+        <td>{{employer.id}}</td>
+    </tr>
+    <tr>
+        <td>First name</td>
+        <td>{{employer.first_name}}</td>
+    </tr>
+    <tr>
+        <td>Last name</td>
+        <td>{{employer.last_name}}</td>
+    </tr>
+    <tr>
+        <td>Organisation</td>
+        <td>{{employer.organisation}}</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>{{employer.email}}</td>
+    </tr>
+    </table>
+    
+<div>
+<button (click)="deleteEmployer()">Delete</button>
+<button (click)="updateEmployer(employer.id)">Edit</button>
+</div>

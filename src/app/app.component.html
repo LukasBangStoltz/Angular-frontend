@@ -1,0 +1,28 @@
+
+
+  <mat-toolbar color="primary">
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/jobs">Jobs</button>
+    <button mat-menu-item routerLink="/volunteers">Volunteers</button>
+    <button mat-menu-item routerLink="/employers">Employers</button>
+  </mat-menu>
+  <span>Volunteer Job Bank</span>
+</mat-toolbar>
+
+  
+
+<mat-slide-toggle (change)="toggleRole()">Switch role</mat-slide-toggle>
+
+
+<router-outlet />
+
+
+ 
+    <footer>
+        <p>© 2024 Volunteer Organization</p>
+    </footer>
+
+

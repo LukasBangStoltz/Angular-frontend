@@ -1,0 +1,19 @@
+<form [formGroup]="employerForm" (ngSubmit)="updateEmployer()">
+  <mat-form-field>
+    <mat-label>First Name</mat-label>
+    <input matInput formControlName="first_name">
+  </mat-form-field><br>
+  <mat-form-field>
+    <mat-label>Last Name</mat-label>
+    <input matInput formControlName="last_name">
+  </mat-form-field><br>
+  <mat-form-field>
+    <mat-label>Organisation</mat-label>
+    <input matInput formControlName="organisation">
+  </mat-form-field><br>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email">
+  </mat-form-field><br>
+  <button mat-raised-button type="submit">Update</button>
+</form> 
