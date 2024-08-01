@@ -50,7 +50,9 @@ export class JobService {
   // Update an job
   updateJob(id: number, job: Job): Observable<any> {
     job.id = id;
-    return this.http.put(`${this.baseUrl}/Job`, job, {
+    console.log("TEST")
+    console.log(job)
+    return this.http.put(`${this.baseUrl}/Job/${id}`, job, {
       headers: {
         "Authorization": this.authHeader
       }

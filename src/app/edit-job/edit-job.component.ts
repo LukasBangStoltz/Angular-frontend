@@ -30,7 +30,8 @@ export class EditJobComponent implements OnInit {
       title: new FormControl('', Validators.required),
       type: new FormControl('', Validators.required),
       organisation: new FormControl('', Validators.required),
-      email: new FormControl('', [Validators.required, Validators.email])
+      email: new FormControl('', [Validators.required, Validators.email]),
+      employerId: new FormControl('', Validators.required),
     });
   }
 
@@ -45,7 +46,9 @@ export class EditJobComponent implements OnInit {
       title: ['', Validators.required],
       type: ['', Validators.required],
       organisation: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]]
+      email: ['', [Validators.required, Validators.email]],
+      employerId: ['', Validators.required],
+
     });
   }
     private loadJobData(): void {

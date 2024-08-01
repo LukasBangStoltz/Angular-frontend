@@ -20,9 +20,14 @@
         <td>Email:</td>
         <td>{{job.email}}</td>
     </tr>
+
+    <tr>
+        <td>Employer ID:</td>
+        <td>{{job.employerId}}</td>
+    </tr>
     </table>
     
 <div>
-<button (click)="deleteJob()">Apply</button>
+<button (click)="deleteJob()">Delete</button>
 <button (click)="updateJob(job.id)">Edit</button>
 </div>

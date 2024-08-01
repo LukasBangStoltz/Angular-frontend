@@ -7,7 +7,7 @@ import { EditEmployerComponent } from './edit-employer/edit-employer.component';
 import { AddEmployerComponent } from './add-employer/add-employer.component';
 import { NgModule } from '@angular/core';
 import { AddVolunteerComponent } from './add-volunteer/add-volunteer.component';
-import { JobListComponent } from './job-list /job-list.component';
+import { JobListComponent } from './job-list/job-list.component';
 import { AddJobComponent } from './add-job/add-job.component';
 import { EditJobComponent } from './edit-job/edit-job.component';
 

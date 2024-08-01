@@ -19,7 +19,8 @@ export class JobListComponent implements OnInit {
     title: '',
     type: '',
     organisation: '',
-    email: ''
+    email: '',
+    employerId: 0
   };
 
   constructor(private jobService: JobService, private router: Router) {}

@@ -4,4 +4,5 @@ export interface Job {
     type: string;
     organisation: string;
     email: string;
+    employerId: number;
 }

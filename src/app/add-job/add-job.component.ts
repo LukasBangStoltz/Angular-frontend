@@ -31,7 +31,8 @@ export class AddJobComponent implements OnInit {
       title: new FormControl('', Validators.required),
       type: new FormControl('', Validators.required),
       organisation: new FormControl('', Validators.required),
-      email: new FormControl('', [Validators.required, Validators.email])
+      email: new FormControl('', [Validators.required, Validators.email]),
+      employeId: new FormControl('', Validators.required)
     });
   }
 
@@ -45,9 +46,12 @@ export class AddJobComponent implements OnInit {
       title: ['', Validators.required],
       type: ['', Validators.required],
       organisation: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]]
+      email: ['', [Validators.required, Validators.email]],
+      employerId: ['', Validators.required],
+      
     });
   }
+  
     createJob(): void {
       console.log('Form submission triggered');
       if (this.jobForm.valid) {
