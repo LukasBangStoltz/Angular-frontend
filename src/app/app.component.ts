@@ -11,6 +11,7 @@ import { EmployerComponent } from "./employer/employer.component";
 import { EmployerListComponent } from './employer-list/employer-list.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @Component({
     selector: 'app-root',
     standalone: true,

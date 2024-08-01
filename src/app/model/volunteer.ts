@@ -1,9 +1,8 @@
 export interface Volunteer {
 
     id: number;
-    first_name: string;
-    last_name: string;
-    age: number;
+    firstName: string;
+    lastName: string;
     email: string;
-    field_of_interest: string;
+    fieldOfInterest: string;
 }

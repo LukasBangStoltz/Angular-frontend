@@ -1,32 +1,19 @@
-<form class="edit-volunteer-form">
-   <mat-form-field>
-       <mat-label>First name</mat-label>
-       <input matInput type="text" [(ngModel)]="volunteer.first_name" name="first_name">
-   </mat-form-field><br/>
-
-
-   <mat-form-field>
-       <mat-label>Last name</mat-label>
-       <input matInput type="text" [(ngModel)]="volunteer.last_name" name="last_name">
-   </mat-form-field><br/>
-
-   <mat-form-field>
-       <mat-label>Age</mat-label>
-       <input matInput type="number" [(ngModel)]="volunteer.age" name="age">
-   </mat-form-field><br/>
-
-
-   <mat-form-field>
-       <mat-label>Email</mat-label>
-       <input matInput type="email" [(ngModel)]="volunteer.email" [formControl]="emailFormControl" name="volunteerEmail">
-   </mat-form-field><br/>
-
-
-   <mat-form-field>
-       <mat-label>Field of interest</mat-label>
-       <input matInput type="text" [(ngModel)]="volunteer.field_of_interest" name="field_of_interest">
-   </mat-form-field><br/>
-
-
-   <button mat-raised-button (click)="updateVolunteer()">Update</button>
-</form>
+<form [formGroup]="volunteerForm" (ngSubmit)="updateVolunteer()">
+    <mat-form-field>
+      <mat-label>First Name</mat-label>
+      <input matInput formControlName="firstName">
+    </mat-form-field><br>
+    <mat-form-field>
+      <mat-label>Last Name</mat-label>
+      <input matInput formControlName="lastName">
+    </mat-form-field><br>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email">
+    </mat-form-field><br>
+    <mat-form-field>
+        <mat-label>Field of interest</mat-label>
+        <input matInput formControlName="fieldOfInterest">
+      </mat-form-field><br>
+    <button mat-raised-button type="submit">Update</button>
+  </form> 

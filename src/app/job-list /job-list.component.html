@@ -1,0 +1,7 @@
+<button (click)="createJob()">Add job</button>
+
+
+@for (job of jobs; track $index) {
+    <app-job [job]="job"></app-job>
+
+    }

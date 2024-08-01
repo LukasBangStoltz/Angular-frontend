@@ -37,14 +37,5 @@ export class EmployerListComponent implements OnInit {
   createEmployer() {
     this.router.navigate(["add-employer"])
   }
-  // createEmployer(): void {
-  //   this.employerService.createEmployer(this.newEmployer).subscribe((employer) => {
-  //     this.employers.push(employer);
-  //     this.newEmployer = {  id: 0,
-  //       firstName: '',
-  //       lastName: '',
-  //       organisation: '',
-  //       email: '' };
-  //   });
   }
 

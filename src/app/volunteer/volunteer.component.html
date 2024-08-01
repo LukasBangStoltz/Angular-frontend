@@ -6,15 +6,11 @@
     </tr>
     <tr>
         <td>First name</td>
-        <td>{{volunteer.first_name}}</td>
+        <td>{{volunteer.firstName}}</td>
     </tr>
     <tr>
         <td>Last name</td>
-        <td>{{volunteer.last_name}}</td>
-    </tr>
-    <tr>
-        <td>Age</td>
-        <td>{{volunteer.age}}</td>
+        <td>{{volunteer.lastName}}</td>
     </tr>
     <tr>
         <td>Email</td>
@@ -22,13 +18,12 @@
     </tr>
     <tr>
         <td>Field of interest</td>
-        <td>{{volunteer.field_of_interest}}</td>
+        <td>{{volunteer.fieldOfInterest}}</td>
     </tr>
     </table>
     
-<div><button (click)="deleteVolunteer()">Delete</button></div>
+<div><button (click)="deleteVolunteer()">Delete</button>
 
-<button (click)="editVolunteer(volunteer.id)">Edit</button>
+<button (click)="updateVolunteer(volunteer.id)">Edit</button>
+</div>
 
-
-    

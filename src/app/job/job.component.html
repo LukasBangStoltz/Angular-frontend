@@ -1,1 +1,28 @@
-<p>job works!</p>
+
+<table>
+    <tr>
+        <td>Id:</td>
+        <td>{{job.id}}</td>
+    </tr>
+    <tr>
+        <td>Title:</td>
+        <td>{{job.title}}</td>
+    </tr>
+    <tr>
+        <td>Type:</td>
+        <td>{{job.type}}</td>
+    </tr>
+    <tr>
+        <td>Organisation:</td>
+        <td>{{job.organisation}}</td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td>{{job.email}}</td>
+    </tr>
+    </table>
+    
+<div>
+<button (click)="deleteJob()">Apply</button>
+<button (click)="updateJob(job.id)">Edit</button>
+</div>
